@@ -1,0 +1,24 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Prescription List</h2>
+      <input style="margin-left: 1000px" class="btn btn-primary btn-md center-block" type="submit" name="Back" id="go" value="Back" (click)="goBack()">
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Pid</th>
+            <th>LabTest</th>
+            <th>Prescription</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let doctor of prescription">
+            <td>{{doctor.pid}}</td>
+            <td>{{doctor.labtest}}</td>
+            <td>{{doctor.medicine}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

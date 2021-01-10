@@ -1,0 +1,36 @@
+	
+    <div >
+		<form #Registerform="ngForm" (ngSubmit)="registerDoctor()">
+			 <div class="container">
+			   <h1>Register</h1>
+			   <p>Please fill in this form to create an account.</p>
+			   <hr>
+					<label for="fname"><b>First Name</b></label>
+				   <input type="text" placeholder="Enter First Name" name="fname" [(ngModel)]="doctor.fname" required>
+
+				   <label for="lname"><b>Last Name</b></label>
+				   <input type="text" placeholder="Enter Last Name" name="lname" [(ngModel)]="doctor.lname" required>
+   
+					   <label for="email"><b>Email</b></label>
+					   <input type="text" placeholder="Enter Email" name="mail" [(ngModel)]="doctor.mail" required>
+   
+	   
+					<label for="specialist"><b>Specialist</b></label>
+				   <input type="text" placeholder="Enter domain" name="specialist" [(ngModel)]="doctor.specialist" required>
+	   
+					<label for="experience"><b>Experience</b></label>
+					  <input type="text" placeholder="Enter experience" name="experience" [(ngModel)]="doctor.experience" required>
+
+					  <label for="password"><b>Password</b></label>
+					  <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="doctor.password" required>
+			   <hr>
+				   <button  type="submit" class="registerbtn">Register</button>
+		   </div>
+	   </form>
+	 </div>
+	 <script> 
+		   function myalert() { 
+			   alert("Registered Successfully!!"); 
+		   } 
+	   </script>
+   

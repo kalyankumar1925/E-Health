@@ -1,0 +1,21 @@
+<h2> Labtest List</h2>
+<input class="btn btn-primary btn-md center-block" type="submit" name="Back" id="go" value="Back" (click)="goBack()">
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Labtest Name</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let labtest of labtests" >
+            <td> {{labtest.testname}}</td>
+            
+            <td>
+                <button (click)="updateLabtest(labtest.lid)" class="btn btn-info"> Update</button>
+                <button (click)="deleteLabtest(labtest.lid)" class="btn btn-danger" style="margin-left:10px"> Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>

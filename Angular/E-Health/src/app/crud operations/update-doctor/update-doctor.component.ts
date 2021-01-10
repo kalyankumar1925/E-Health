@@ -1,0 +1,50 @@
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DoctorService } from 'src/app/doctor.service';
+import { Doctor } from 'src/doctor';
+
+
+@Component({
+  selector: 'app-update-doctor',
+  templateUrl: './update-doctor.component.html',
+  styleUrls: ['./update-doctor.component.css']
+})
+export class UpdateDoctorComponent implements OnInit {
+
+  
+  id: number;
+  doctor:Doctor;
+
+  constructor(private route: ActivatedRoute,private router: Router,
+    private doctorService: DoctorService) { }
+
+  ngOnInit() {
+    this.doctor = new Doctor();
+
+    this.id = this.route.snapshot.params['id'];
+    
+    this.doctorService.getDoctor(this.id)
+      .subscribe(data => {
+        console.log(data)
+        this.doctor = data;
+      }, error => console.log(error));
+  }
+
+  updateDoctor() {
+    this.doctorService.updateDoctor(this.id, this.doctor)
+      .subscribe(data => {
+        console.log(data);
+        this.doctor = new Doctor();
+        this.gotoList();
+      }, error => console.log(error));
+  }
+
+  onSubmit() {
+    this.updateDoctor();    
+  }
+
+  gotoList() {
+    this.router.navigate(['/doctors']);
+  }
+
+}

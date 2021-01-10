@@ -1,0 +1,74 @@
+<div class="col-md-5 offset-md-3 col-xs-3" style="display:inline-block;">
+    <h3 style="text-align: center;padding-bottom: 15px; padding-top: 10px;"> <b>Book Appointment </b></h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group  form-inline">
+            <label> Patient Name: </label>
+            <div class="input-wrapper">
+            <input type="text" class="form-control " id="patientName"
+            [(ngModel)]="appointment.patientName" name="patientName" >
+        </div>
+        </div>
+    
+        
+        <div class="form-group form-inline">
+            <label> Doctor Name: </label>
+            <div class="input-wrapper">
+               <select class="form-control" name="doctorName" [(ngModel)]="appointment.doctorName">
+                    <option *ngFor="let doctor of doctors" >   
+                        {{doctor}}
+                    </option>
+                </select>
+        </div>
+    </div>
+    
+        
+        <div class="form-group form-inline">
+            <label> Date: </label>
+            <div class="input-wrapper">
+            <input type="text" class="form-control" id="date"
+            [(ngModel)]="appointment.date" name="date">
+        </div>
+    </div>
+    
+        
+        <div class="form-group form-inline">
+            <label> Age: </label>
+            <div class="input-wrapper">
+            <input type="text" class="form-control" id="age"
+            [(ngModel)]="appointment.age" name="age">
+        </div>
+        </div>
+    
+        
+        <div class="form-group form-inline">
+            <label>Gender:</label>
+            <div class="input-wrapper">
+            <input type="text" class="form-control" id="gender"
+            [(ngModel)]="appointment.gender" name="gender">
+        </div>
+        </div>
+    
+        
+        <div class="form-group form-inline">
+            <label> Description: </label>
+            <div class="input-wrapper">
+            <input type="text" class="form-control" id="description"
+            [(ngModel)]="appointment.description" name="device-width">
+        </div>
+        </div>
+    
+        
+        <div class="form-group form-inline">
+            <label> Contact: </label>
+            <div class="input-wrapper">
+            <input type="text" class="form-control" id="contact"
+            [(ngModel)]="appointment.contact" name="contact">
+        </div>
+        </div>
+    
+        <button class="btn btn-primary btn-md btn-block" type="submit">Submit</button>
+        <input style="margin-bottom: 50px; margin-left: 550px;" class="btn btn-primary btn-md center-block" type="submit" name="Back" id="go" value="Back" (click)="goBack()">
+    </form>
+    
+    </div>

@@ -1,0 +1,33 @@
+<h3>Create Doctor</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" required [(ngModel)]="doctor.fname" name="fname">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Last Name</label>
+      <input type="text" class="form-control"  required [(ngModel)]="doctor.lname" name="lname">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control"  required [(ngModel)]="doctor.mail" name="email">
+    </div>
+    <div class="form-group">
+        <label for="name">Specialist</label>
+        <input type="text" class="form-control"  required [(ngModel)]="doctor.specialist" name="specialist">
+    </div>
+    <div class="form-group">
+        <label for="name">Experience</label>
+        <input type="text" class="form-control"  required [(ngModel)]="doctor.experience" name="exp">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

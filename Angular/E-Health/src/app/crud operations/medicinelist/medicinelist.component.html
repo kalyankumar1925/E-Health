@@ -1,0 +1,30 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Medicine List</h2>
+      <input class="btn btn-primary btn-md center-block" type="submit" name="Back" id="go" value="Back" (click)="goBack()">
+
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Medicine name</th>
+            <th>Quantity</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medicine of medicines">
+            <td>{{medicine.medname}}</td>
+            <td>{{medicine.quantity}}</td>
+            <td>
+                <button (click)="updateMedicine(medicine.mid)" class="btn btn-info"> Update</button>
+                <button (click)="deleteMedicine(medicine.mid)" class="btn btn-danger" style="margin-left:10px"> Delete</button>
+ 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Add Labtest </h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label> Labtest Name </label>
+            <input type="text" class="form-control" 
+            [(ngModel)]="labtest.testname" name="testname">
+        </div>
+    
+        
+        
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    
+    </form><br>
+    <input class="btn btn-primary btn-md center-block" type="submit" name="Back" id="go" value="Back" (click)="goBack()">
+
+    </div>

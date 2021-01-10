@@ -1,0 +1,23 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Medicine </h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label> Medicine Name </label>
+            <input type="text" class="form-control" 
+            [(ngModel)]="medicine.medname" name="medname">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> Quantity </label>
+            <input type="text" class="form-control" 
+            [(ngModel)]="medicine.quantity" name="quantity">
+        </div>  
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    
+    </form>
+    </div>
+
+

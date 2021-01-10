@@ -1,0 +1,21 @@
+body{
+    background-image: url('https://image.freepik.com/free-photo/flat-lay-with-doctor-desk-table-with-stethoscope-notebook-office-supplies-copy-space_120794-403.jpg');
+    width: 100%;
+    height: 100%;
+    position:absolute;
+     background-size:cover;
+   
+    background-repeat:no-repeat;
+   
+}
+ button
+{
+width:120px;
+height:120px;
+border-radius:90%;
+color:white;
+background-color: blue;
+}
+button:hover{
+background-color:black;
+}

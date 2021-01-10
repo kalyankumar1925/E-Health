@@ -1,0 +1,30 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Add Prescription </h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label> PatientId </label>
+            <input type="text" class="form-control" id="pid" [value]="pid" placeholder={{pid}}
+             [(ngModel)]="prescription.pid" name="pid">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> LabTest </label>
+            <input type="text" class="form-control" id="labtest"
+            [(ngModel)]="prescription.labtest" name="labtest">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> Medicine </label>
+            <input type="text" class="form-control" id="medicine"
+            [(ngModel)]="prescription.medicine" name="medicine">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    
+    </form><br>
+    <input  class="btn btn-primary btn-md center-block" type="submit" name="Back" id="go" value="Back" (click)="goBack()">
+    </div>

@@ -1,0 +1,57 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Appointment </h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label> Patient Name </label>
+            <input type="text" class="form-control" id="patientName"
+            [(ngModel)]="appointment.patientName" name="patientName">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> Doctor Name </label>
+            <input type="text" class="form-control" id="doctorName"
+            [(ngModel)]="appointment.doctorName" name="doctorName">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> Date </label>
+            <input type="text" class="form-control" id="date"
+            [(ngModel)]="appointment.date" name="date">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> Age </label>
+            <input type="text" class="form-control" id="age"
+            [(ngModel)]="appointment.age" name="age">
+        </div>
+    
+        
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="text" class="form-control" id="gender"
+            [(ngModel)]="appointment.gender" name="gender">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> Description </label>
+            <input type="text" class="form-control" id="description"
+            [(ngModel)]="appointment.description" name="device-width">
+        </div>
+    
+        
+        <div class="form-group">
+            <label> Contact </label>
+            <input type="text" class="form-control" id="contact"
+            [(ngModel)]="appointment.contact" name="contact">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Submit</button>
+    
+    
+    </form>
+    </div>

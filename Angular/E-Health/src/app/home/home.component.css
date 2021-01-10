@@ -1,0 +1,10 @@
+.image{
+     background-size:cover; 
+    background-image:url('https://www.kuwaiteyecenter.com/wp-content/uploads/2018/01/medas-banner.jpg');
+    
+
+    
+        height:35em; background-size:cover; width:100%;
+      
+        background-position:50% 50%;
+      }

@@ -1,0 +1,17 @@
+
+<h2> Prescription</h2>
+<input style="margin-left: 1000px" class="btn btn-primary btn-md center-block" type="submit" name="Back" id="go" value="Back" (click)="goBack()">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Required LabTest</th>
+            <th> Medicine</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td> {{ prescription.labtest}}</td>
+            <td> {{ prescription.medicine}}</td>
+        </tr>
+    </tbody>
+</table>

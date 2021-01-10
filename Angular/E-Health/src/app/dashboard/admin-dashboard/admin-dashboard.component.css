@@ -1,0 +1,23 @@
+
+button{
+    background-color: rgb(29, 113, 238);
+border-radius: 5px;
+padding:5px 25px;
+ }
+button:hover{
+  background-color: black;
+  color:white;
+  }
+a:hover{
+color:white;
+}
+a,b{
+color:white;
+text-decoration:none;
+}
+table{
+border-spacing:20px;
+} 
+td{
+padding:30px;
+}
